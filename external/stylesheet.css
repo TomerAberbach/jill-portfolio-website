@@ -1,0 +1,251 @@
+/*
+
+white: #FFFFFF
+very light yellow: #F0E5C4
+yellow: #DDB239
+gold: #D19D00
+black: #000000
+
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", serif;
+    color: #D19D00;
+}
+
+li, p, label, input, textarea {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 100px;
+}
+
+nav ul {
+    height: inherit;
+    padding: 0;
+    margin: 0;
+
+    background-color: #DDB239;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    height: inherit;
+    line-height: 100px;
+    padding: 0 25px;
+
+    display: inline;
+    font-size: larger;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+
+    transition: color 0.2s ease-in-out;
+}
+nav a:hover {
+    color: #F0E5C4;
+    cursor: pointer;
+}
+
+#icon {
+    margin-top: 15px;
+    height: 70px;
+    float: left;
+}
+
+#menu {
+    margin-top: 15px;
+    margin-right: 20px;
+    float: right;
+    height: 70px;
+    display: none;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+hr {
+    width: 95%;
+    margin: 60px auto;
+    border: 2px solid #DDB239;
+    box-shadow: 0 4px 3px #888888;
+}
+
+section {
+    width: 75%;
+    padding: 30px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home {
+    padding-top: 130px;
+    padding-bottom: 0;
+}
+
+img {
+    height: 100px;
+    display: inline-block;
+}
+
+#logo {
+    width: 40%;
+    height: initial;
+    float: left;
+}
+
+h1 {
+    margin: 0;
+    text-align: inherit;
+    font-size: 50pt;
+}
+
+#about {
+    width: 55%;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+.div-justify {
+    text-align: justify;
+}
+.div-justify:after {
+    content: '';
+     width: 100%;
+     display: inline-block;
+ }
+
+.portfolio {
+    background-color: white;
+    display: inline-block;
+    padding: 1em;
+    margin: 10px;
+    height: auto;
+    box-shadow: 0 4px 20px #888888;
+    transition: all 0.2s linear;
+}
+
+.portfolio img {
+    height: initial;
+    width: initial;
+    max-width: 100%;
+
+}
+.portfolio:hover {
+    z-index: -100;
+    transform: scale(1.02);
+}
+
+form {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: larger;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    font-size: large;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+    color: #D19D00;
+    border-color: #D19D00;
+}
+
+.opennav {
+    height: 400px;
+}
+
+.openli {
+    display: block;
+}
+
+@media screen and (max-width: 1300px) {
+    nav li {
+        font-size: medium;
+    }
+
+    #logo {
+        width: 60%;
+        margin: 0 auto;
+        float: none;
+        display: block;
+    }
+
+    #about {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #menu {
+        display: initial;
+    }
+
+    h1 {
+        font-size: 40pt;
+    }
+
+    nav li {
+        height: 14%;
+        line-height: 40px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+       font-size: 30pt;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    h1 {
+        font-size: 25pt;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #about img {
+        width: 30%;
+        height: initial;
+    }
+}
