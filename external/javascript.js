@@ -32,4 +32,6 @@ function toggleSections() {
             }
         }
     }
+
+    return true;
 }
