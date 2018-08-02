@@ -1,0 +1,17 @@
+<section id="section">
+    <h1>{{titleize (replace subtitle '-' ' ')}}</h1>
+    <ul>
+        {{#each images}}
+            <li>
+                <a href="#{{stem this}}-img">
+                    <img class="click-img" src="{{relative @file.relative this}}"/>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+
+    {{#each images}}
+        <a href="#_" class="lightbox" id="{{stem this}}-img"><img src="{{relative @file.relative this}}"/></a>
+    {{/each}}
+
+</section>

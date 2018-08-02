@@ -1,0 +1,62 @@
+---
+title: Jill Marbach
+author: Jill Marbach
+creator: Tomer Aberbach
+description: A portfolio website for a Marketing and Graphic Design student at The College of New Jersey.
+keywords:
+- porfolio
+- jill
+- marbach
+- marketing
+- graphic
+- design
+- sticker
+- drawing
+url: https://www.tcnj.edu/~marbacj1
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+        <title>{{title}} | {{subtitle}}</title>
+
+        <meta name="author" content="{{author}}"/>
+        <meta name="creator" content="{{creator}}"/>
+        <meta name="description" content="{{description}}"/>
+        <meta name="keywords" content="{{join tags ','}}"/>
+
+        <meta itemprop="name" content="{{title}} | {{subtitle}}"/>
+        <meta itemprop="description" content="{{description}}"/>
+        <meta itemprop="image" content="{{url}}/img/icon.png"/>
+
+        <meta property="og:title" content="{{title}} | {{subtitle}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{url}}/{{@file.relative}}"/>
+        <meta property="og:image" content="{{url}}/img/icon.png"/>
+        <meta property="og:description" content="{{description}}"/>
+        <meta property="og:site_name" content="{{title}} | {{subtitle}}"/>
+
+        <link rel="stylesheet" type="text/css" href="{{relative @file.relative 'stylesheet.css'}}"/>
+    </head>
+    <body>
+        <header class="header-top">
+            <a href="{{relative @file.relative 'index.html'}}"><img id="icon" src="{{relative @file.relative 'img/icon.svg'}}"/></a>
+        </header>
+
+        {{{body}}}
+
+        <hr/>
+
+        <section>
+            <h2>Contact Me</h2>
+            <form method="POST" action="https://formspree.io/marbacj1@tcnj.edu">
+                <label>Name:</label><br/><input name="name" type="text"/><br/>
+                <label>Email:</label><br/><input name="email" type="text"/><br/>
+                <label>Message:</label><br/><textarea name="message" rows="10"></textarea><br/>
+                <button>Send</button>
+            </form>
+        </section>
+    </body>
+</html>

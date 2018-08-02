@@ -1,0 +1,36 @@
+---
+subtitle: Home
+---
+<section id="home">
+    <div>
+        <img id="logo" src="{{relative @file.relative 'img/logo.svg'}}"/>
+        <div id="about">
+            <h1>About Me</h1>
+            <p>
+                I'm Jill Marbach, a <strong>Marketing</strong> and <strong>Graphic Design</strong> student at the
+                College of New Jersey. I strive to create work that is fun, relevant and has a clean design. I have been
+                creating everything from book covers and laptop stickers to digital portraits for the past four years. I
+                am proficient in Photoshop, Illustrator and InDesign. Below, you can find some of my favorite pieces of
+                work.
+            </p>
+            <div class="div-justify">
+                <a target="_blank" rel="noopener" href="https://www.redbubble.com/people/jillmarbach?ref=side-nav-account&asc=u"><img src="{{relative @file.relative 'img/redbubble.png'}}"/></a>
+                <a target="_blank" rel="noopener" href="http://s1001.photobucket.com/user/everything_author/library/?page=1&sort=3"><img src="{{relative @file.relative 'img/photobucket.png'}}"/></a>
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jillian-marbach-298546130/"><img src="{{relative @file.relative 'img/linkedin.svg'}}"/></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr/>
+
+<section>
+    <h1>Sections</h1>
+    <nav>
+        <ul>
+            {{#each sections}}
+                <li><a href="pages/{{this}}.html">{{titleize (replace this '-' ' ')}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+</section>

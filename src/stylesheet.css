@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Georgia", serif;
+    color: #D19D00;
+}
+
+li, p, label, input, textarea {
+    font-family: 'Open Sans', sans-serif;
+    color: #000000;
+}
+
+body {
+    margin: 0;
+}
+
+.header-top {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    height: 100px;
+    background-color: #DDB239;
+}
+
+.header-top img {
+    margin-top: 15px;
+    height: 70px;
+    float: left;
+}
+
+hr {
+    width: 95%;
+    margin: 60px auto;
+    border: 2px solid #DDB239;
+    box-shadow: 0 4px 3px #888888;
+}
+
+section {
+    width: 75%;
+    padding: 30px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home, #section {
+    padding-top: 130px;
+    padding-bottom: 0;
+}
+
+img {
+    height: 100px;
+    display: inline-block;
+}
+
+#logo {
+    width: 40%;
+    height: initial;
+    float: left;
+}
+
+h1 {
+    margin: 0;
+    text-align: inherit;
+    font-size: 50pt;
+}
+
+h2 {
+    margin: 0;
+    text-align: inherit;
+    font-size: 45pt;
+}
+
+#about {
+    width: 55%;
+    margin-left: 5%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.div-justify {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.div-justify > a {
+    width: 80vw;
+    max-width: 150px;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.div-justify > a > img {
+    width: 100%;
+    height: auto;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+}
+
+.click-img {
+    padding: 30px;
+    width: 30vw;
+    height: auto;
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+}
+.click-img:hover {
+    transform: scale(1.05);
+}
+
+nav ul li {
+    padding: 30px;
+}
+
+nav ul li a {
+    font-size: 20pt;
+    transition: color ease-in-out 0.2s;
+}
+
+nav ul li a:hover {
+    color: #DDB239;
+}
+
+form {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: larger;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid black;
+    font-size: larger;
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    text-decoration: none;
+    font-size: large;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    color: #D19D00;
+    border-color: #D19D00;
+}
+
+@media screen and (max-width: 1300px) {
+    #logo {
+        width: 60%;
+        margin: 0 auto;
+        float: none;
+        display: block;
+    }
+
+    #about {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 40pt;
+    }
+
+    h2 {
+        font-size: 35pt;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1, h2 {
+        font-size: 30pt;
+    }
+
+    nav ul li a {
+        font-size: 15pt;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    h1, h2 {
+        font-size: 25pt;
+    }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin-top: 2%;
+}
+
+.lightbox:target {
+    outline: none;
+    display: block;
+}
