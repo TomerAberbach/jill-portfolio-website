@@ -16,6 +16,7 @@ const cssnano = require('cssnano')
 const imagemin = require('gulp-imagemin')
 const webserver = require('gulp-webserver')
 const folders = require('gulp-folders')
+const titleize = require('titleize')
 
 const clean = () => del(['./dist'])
 const index = () =>
@@ -48,7 +49,10 @@ const pages = cb =>
         images: fs.readdirSync(path.join('./src/img', folder)).map(name => path.join('img', folder, name))
       }))
       .pipe(through.obj((file, enc, cb) => {
-        file.data = {body: file.contents}
+        file.data = {
+          subtitle: titleize(folder.replace('-', ' ')),
+          body: file.contents
+        }
         gulp.src('./src/layout/html.hbs')
           .pipe(frontMatter({property: 'data', remove: true}))
           .pipe(rename(path.join('pages', `${folder}.html`)))
