@@ -146,6 +146,8 @@ const favicons = cb =>
 const def = gulp.series(clean, gulp.parallel(gulp.series(favicons, gulp.parallel(index, pages)), css, img))
 gulp.task('default', def)
 
+gulp.task('clean', clean)
+
 const serve = () =>
   gulp.src('./dist')
     .pipe(webserver({
